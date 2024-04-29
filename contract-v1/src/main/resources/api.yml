@@ -1,0 +1,20 @@
+openapi: 3.0.3
+
+info:
+  title: Data API
+  version: '1.0.0'
+
+paths:
+  /v0/data/{data_id}:
+    # You can activate the reference below and IntelliJ will show the file.
+    $ref: './path-data.yml'
+
+components:
+  parameters:
+    dataId:
+      name: data_id
+      required: true
+      in: path
+      schema:
+        type: string
+        format: uuid

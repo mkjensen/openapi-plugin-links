@@ -1,0 +1,26 @@
+get:
+  tags:
+    - data
+  summary: Get the data
+  operationId: getData
+  description: |
+    Expose the very important data.
+  parameters:
+    - $ref: 'api.yml#/components/parameters/dataId'
+  responses:
+    200:
+      description: Data returned successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - id
+            properties:
+              id:
+                type: string
+                format: uuid
+    default:
+      # IntelliJ shows an "Unresolved reference" error for the reference below.
+      # openapi-generator-maven-plugin understands the reference and generates the expected code.
+      $ref: '/common/problem.yml#/GenericError'
