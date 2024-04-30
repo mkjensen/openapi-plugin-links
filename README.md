@@ -6,4 +6,4 @@ However, IntelliJ's built-in [OpenAPI Specifications](https://plugins.jetbrains.
 
 ![Unresolved reference error in IntelliJ](./unresolved-reference.png)
 
-By executing `./mvnw clean install`, the `application/src/test/java/org/example/ApplicationTest.java` test passes and it uses the `Problem` class which is defined in the [common module](./common/src/main/resources/common/problem.yml) which is depended on by the [contract-v1 module](./contract-v1/pom.xml) (via the dependencies of `openapi-generator-maven-plugin`).
+By executing `./mvnw clean test`, the `application/src/test/java/org/example/ApplicationTest.java` test passes and it uses the `Problem` class which is defined in the [common module](./common/src/main/resources/common/problem.yml) which is depended on by the [contract-v1 module](./contract-v1/pom.xml) (via the dependencies of `openapi-generator-maven-plugin`).
